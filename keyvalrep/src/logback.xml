@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Set the root logger level to WARN -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Define the CONSOLE appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{ISO8601} [%t] %-5p %c %x - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Suppress ZooKeeper debug logs -->
+    <logger name="org.apache.zookeeper" level="WARN" />
+</configuration>
